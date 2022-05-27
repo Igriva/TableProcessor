@@ -1,9 +1,10 @@
 import os
+import sys
 import tableprocessor as tp
 
 if __name__ == "__main__":
-    
-    os.chdir('data')
+    path = sys.argv[1]
+    os.chdir(path)
     print(os.getcwd())
 
     file_list = [i for i in os.listdir('.') if i.split(".")[-1].find("xls") >= 0]
